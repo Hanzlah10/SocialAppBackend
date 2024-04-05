@@ -1,1 +1,1 @@
-A socialApp ,some sort of Titter implementation 
+A socialApp ,some sort of Twitter implementation
