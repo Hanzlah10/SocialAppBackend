@@ -6,6 +6,7 @@ const Tweet = new TweetRepository()
 const create = async (postData) => {
 
     try {
+        console.log(postData)
         const str = postData.content
         const createdPost = await Tweet.createTweet(postData)
         console.log(createdPost);

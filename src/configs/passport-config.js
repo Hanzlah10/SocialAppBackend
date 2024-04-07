@@ -15,7 +15,7 @@ const passportAuth = (passport) => {
 
 
     passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
-        console.log("Inside JWT  Strategy")
+        // console.log("Inside JWT  Strategy")
         const user = await User.findById(jwt_payload.id);
 
         // const token = await client.get(jwt_payload.id)

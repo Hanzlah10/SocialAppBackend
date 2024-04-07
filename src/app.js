@@ -11,6 +11,7 @@ const { client } = require('./configs/redis-config')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.raw({ inflate: true, type: 'application/json' }))
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
@@ -21,7 +22,7 @@ app.use((req, res, next) => {
 
 passportAuth(passport)
 app.use('/api', apiRoutes)
-app.listen(PORT, async (req, res) => {
+app.listen(PORT, async () => {
   await connectDB();
   // (async function () {
   //   await client.connect()
