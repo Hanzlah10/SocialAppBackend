@@ -16,4 +16,4 @@ router.post('/comment', authentication, commentController.createComment)
 router.post('/follow/:userId', authentication, followController.follow);
 // router.post('/upload',,)
 
-module.exports = router
+module.exports = router 

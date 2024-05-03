@@ -2,7 +2,7 @@ const { Hashtag } = require('../models')
 
 const createHashtag = async (hashtag) => {
     try {
-        console.log(hashtag)
+        // console.log(hashtag)
         const createdHashtag = await Hashtag.insertMany(hashtag)
         return createdHashtag
     } catch (error) {
@@ -13,7 +13,6 @@ const createHashtag = async (hashtag) => {
 const getByTagName = async (hashtag) => {
     try {
         const hashtagResponse = Hashtag.find({ title: { $in: hashtag } })
-
         return hashtagResponse
     } catch (error) {
         throw new ApiError(ServerErrorCodes.INTERNAL_SERVER_ERROR, "Error While Fetching  Hashtag", error)

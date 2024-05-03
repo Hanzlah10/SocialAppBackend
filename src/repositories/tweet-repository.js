@@ -32,7 +32,7 @@ class TweetRepository {
     async get(postData) {
         try {
             // Assuming postData contains the current user's ID
-            const currentUser = postData.user_id;
+            const currentUser = postData.userid;
 
             // Retrieve the list of users that the current user is following
             const followingUsers = await User.findOne({ _id: currentUser }).select('following');
