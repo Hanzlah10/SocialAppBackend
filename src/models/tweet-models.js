@@ -28,7 +28,6 @@ const TweetSchema = new Schema({
         type: String,
         // required: true
     }
-
 }, {
     versionKey: false
 })

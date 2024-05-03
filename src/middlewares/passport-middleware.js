@@ -11,7 +11,7 @@ const authentication = (req, res, next) => {
         }
 
         req.userid = user.id;
-        console.log(req.body + "from middle")
+        // console.log(req.body + "from middle")
         // console.log(req.body.content + "egegd")
         // console.log(req.userid + " from middleware")
         next();

@@ -8,7 +8,7 @@ const createTweet = asyncHandler(async (req, res) => {
     try {
 
         const data = req.body
-        console.log("data.content" + data.content)
+        // console.log("data.content" + data.content)
         // console.log(req.file)
         // if (req.file == undefined) {
         //     console.log('fds');
@@ -19,6 +19,7 @@ const createTweet = asyncHandler(async (req, res) => {
             console.log(data, req.file, "inj")
         }
         const response = await tweetService.create(data)
+        console.log(response)
         return res.status(201).json(
             new ApiResponse(SuccessCodes.CREATED, "Post Created Succesfully", response)
         );

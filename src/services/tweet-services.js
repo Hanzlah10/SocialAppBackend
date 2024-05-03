@@ -6,10 +6,10 @@ const Tweet = new TweetRepository()
 const create = async (postData) => {
 
     try {
-        console.log(postData)
+        // console.log(postData)
         const str = postData.content
         const createdPost = await Tweet.createTweet(postData)
-        console.log(createdPost);
+        // console.log(createdPost);
         const hashtagsArr = str.match(/#([a-zA-Z])\w+/g)
         const existingHashtags = await HashTagRepository.getByTagName(hashtagsArr)
         const hashtag = existingHashtags.map(tag => tag.title)
